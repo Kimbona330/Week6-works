@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"
+	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript"> 
+		var imgArray=new Array(); 
+		imgArray[0]="1.png"; 
+		imgArray[1]="2.png"; 
+		imgArray[2]="3.png"; 
+		imgArray[3]="4.png";
+		imgArray[4]="5.png";
+		imgArray[5]="6.png";
+
+	function showImage(){ 
+		var imgNum=Math.round(Math.random()*5); 
+		var objImg=document.getElementById("introimg"); 
+		objImg.src=imgArray[imgNum]; 
+		setTimeout(showImage,1000); }
+		
+</script>
+</head>
+
+<body onload="showImage()">
+	<img id="introimg" border="0">
+</body>
+
+</html>
